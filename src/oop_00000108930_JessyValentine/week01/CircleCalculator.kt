@@ -1,7 +1,7 @@
 package oop_00000108930_JessyValentine.week01
 
 fun main(args: Array<String>) {
-    var radius = Double = 7.0
+    var radius: Double = 7.0
     var pi: Double = 3.14
 
     var area: Double = pi * radius * radius
