@@ -4,7 +4,6 @@ import java.util.Scanner
 
 class Loan (val bookTitle: String, val borrower: String, val loanDuration: Int = 1) {
     fun calculateFine(): Int {
-        print("tes")
         if (loanDuration > 3){
             return (loanDuration - 3) * 2000
         } else {
