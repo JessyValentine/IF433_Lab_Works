@@ -1,4 +1,3 @@
-
 package oop_00000108930_JessyValentine.week05
 
 fun main(){
@@ -8,6 +7,11 @@ fun main(){
     val listPaymentMethod: List<PaymentMethod> = listOf(dompet, kartu)
 
     for (payment in listPaymentMethod) {
+        when (payment) {
+            is EWallet -> {
+                payment.topUp(50000.0)
+            }
+        }
         payment.processPayment(75000.0)
     }
 }
