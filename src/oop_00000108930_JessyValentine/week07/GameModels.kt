@@ -1,0 +1,9 @@
+package oop_00000108930_JessyValentine.week07
+
+enum class ItemRarity (val dropChance: Int){
+    COMMON (70),
+    UNCOMMON (60),
+    RARE (30),
+    EPIC (10),
+    LEGENDARY (5)
+}
