@@ -11,5 +11,12 @@ fun main(){
     println("Weapon name: ${wep.item.name}")
     println("Damage: ${wep.item.damage}")
     println("Rarity: ${wep.item.rarity}")
-    println("Durability: ${wep.durability}")
+    println("Durability: ${wep.durability}\n")
+
+    val wep2 = wep.item.copy(damage = 25)
+
+    processEvent(BattleState.SafeZone)
+    processEvent(BattleState.MonsterEncounter("Goblin Nakal"))
+    processEvent(BattleState.LootDropped(wep2))
+    processEvent(BattleState.GameOver("Terkena jebakan racun"))
 }
