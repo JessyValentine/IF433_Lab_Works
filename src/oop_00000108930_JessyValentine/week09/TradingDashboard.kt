@@ -1,5 +1,7 @@
 package oop_00000108930_JessyValentine.week09
 
+//TESTED: Semoga bener AMIN
+
 fun main(){
     val tradeHistory = listOf(
         TradeLog("BTC/USDT", "LONG", 20, 5.0, "OPEN"),
