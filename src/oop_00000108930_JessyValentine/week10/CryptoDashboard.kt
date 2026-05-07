@@ -5,4 +5,6 @@ fun main(){
     coinRepo.add(Coin("ETH", 3.14))
     coinRepo.add(Coin("BTC", 1.2))
     coinRepo.add(Coin("USDT", 2.1))
+
+    val response = ApiResponse("200 OK", coinRepo.getAll())
 }
