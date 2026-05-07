@@ -1,5 +1,7 @@
 package oop_00000108930_JessyValentine.week10
 
+//Tested
+
 fun main(){
     val coinRepo = WalletRepository<Coin>()
     coinRepo.add(Coin("ETH", 3.14))
