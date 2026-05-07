@@ -1,0 +1,5 @@
+package oop_00000108930_JessyValentine.week10
+
+fun <T> printData(data: T){
+    println("Data yang diterima: $data")
+}
