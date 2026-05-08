@@ -36,4 +36,14 @@ fun main(){
     }
 
     println(searchResult)
+
+    with(homeDevices){
+        for(item in this){
+            println("\nDevice name: ${item.name}")
+            println("Device category: ${item.category}")
+            println("Device status: ${item.isOnline}")
+            println("Device power: ${item.powerLoad}")
+        }
+        println("\nList size: ${this.size}")
+    }
 }
