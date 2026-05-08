@@ -1,19 +1,31 @@
 package oop_00000108930_JessyValentine.week11
 
-fun main() {
+fun main(){
     val homeDevices = mutableListOf<SmartDevice>()
-    val lampuPintar = SmartDevice("Philips WiZ Living Room", "Lighting").apply {
+    val lampuPintar = SmartDevice("Philips WiZ Living Room", "Lighting").apply{
         isOnline = true
         powerLoad = 12
-    }.also {
+    }.also{
         homeDevices.add(it)
     }
 
-    val perangkat = SmartDevice("Ezviz Outdoor", "Camera").apply {
+    val perangkat = SmartDevice("Ezviz Outdoor", "Camera").apply{
         isOnline = true
         powerLoad = 5
-    }.also {
+    }.also{
         println("(LOG) Kamera terhubung")
+        homeDevices.add(it)
+    }
+
+    val hasil = run{
+        SmartDevice("Daikin Inverter (Kabel 3x2.5", "HVAC", false, 800)
+    }.also{
+        homeDevices.add(it)
+    }
+
+    val hasil2 = run{
+        SmartDevice("Picolo's Auto Feeder", "Per Care", true, 10)
+    }.also{
         homeDevices.add(it)
     }
 }
