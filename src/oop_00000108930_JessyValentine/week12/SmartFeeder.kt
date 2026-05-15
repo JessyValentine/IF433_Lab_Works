@@ -13,9 +13,9 @@ fun dispenseKibble(requestedGram: Int, availableGram: Int, isJammed: Boolean): I
 }
 
 fun main(){
-    var currentKibblStock = 50
+    var currentKibbleStock = 50
     try{
-        dispenseKibble(80,currentKibblStock,false)
+        dispenseKibble(80,currentKibbleStock,false)
     }catch (e: DispenserJamException){
         println("Dispenser Jammed! ${e.message}")
     }catch(e: FoodEmptyException){
@@ -26,5 +26,10 @@ fun main(){
         println("Siklus pengecekan dispenser pagi selesai.")
     }
 
-    runCatching { dispenseKibble(30,1000,false) }
+    runCatching {
+        dispenseKibble(30, 1000, false)
+    }.onSuccess { newStock ->
+        currentKibbleStock = newStock
+        println("Makan sore sukses! Sisa stok kibble: $currentKibbleStock gr")
+    }
 }
